@@ -7,7 +7,7 @@ import { CreateUserForm } from '@/features/admin-users/components/CreateUserForm
 import { CreateDepartmentForm } from '@/features/admin-users/components/CreateDepartmentForm'
 import { CreateTeamForm } from '@/features/admin-users/components/CreateTeamForm'
 import { AddTeamMemberForm } from '@/features/admin-users/components/AddTeamMemberForm'
-import { Card, CardTitle } from '@/components/ui'
+import { Card, CardTitle, LiveDateTime } from '@/components/ui'
 import type { UserRole } from '@/types/database'
 
 export const metadata = {
@@ -60,6 +60,7 @@ export default async function AdminPage() {
     <div className="p-6 md:p-8 max-w-6xl mx-auto space-y-8">
       <div>
         <h1 className="text-2xl font-bold text-foreground">Administracion</h1>
+        <p className="text-foreground-secondary mt-1"><LiveDateTime /></p>
         <p className="text-foreground-secondary mt-1">
           Gestiona usuarios, departamentos y equipos
         </p>

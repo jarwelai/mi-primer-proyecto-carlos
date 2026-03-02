@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { getTeamMembers, getEmployeesTodayStatus, getEmployeesWeeklyHours } from '@/actions/team'
 import { EmployeeStatusTable } from '@/features/team-dashboard/components/EmployeeStatusTable'
-import { Card, CardTitle } from '@/components/ui'
+import { Card, CardTitle, LiveDateTime } from '@/components/ui'
 
 export const metadata = {
   title: 'Mi Equipo | TimeTrack',
@@ -54,6 +54,7 @@ export default async function TeamPage() {
     <div className="p-6 md:p-8 max-w-6xl mx-auto space-y-8">
       <div>
         <h1 className="text-2xl font-bold text-foreground">Mi Equipo</h1>
+        <p className="text-foreground-secondary mt-1"><LiveDateTime /></p>
         <p className="text-foreground-secondary mt-1">
           {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {teams?.map((t: any) => t.name).join(', ')}

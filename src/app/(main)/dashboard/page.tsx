@@ -4,7 +4,7 @@ import { getTodayEntries, getWeeklyHours, hasOpenCheckIn } from '@/actions/time-
 import { CheckInButton } from '@/features/check-in/components/CheckInButton'
 import { TodayTimeline } from '@/features/check-in/components/TodayTimeline'
 import { WeeklyProgress } from '@/features/check-in/components/WeeklyProgress'
-import { Card, CardTitle } from '@/components/ui'
+import { Card, CardTitle, LiveDateTime } from '@/components/ui'
 
 export const metadata = {
   title: 'Dashboard | TimeTrack',
@@ -33,13 +33,6 @@ export default async function DashboardPage() {
     hasOpenCheckIn(),
   ])
 
-  const today = new Date().toLocaleDateString('es', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-
   return (
     <div className="p-6 md:p-8 max-w-5xl mx-auto space-y-8">
       {/* Header */}
@@ -47,7 +40,7 @@ export default async function DashboardPage() {
         <h1 className="text-2xl font-bold text-foreground">
           {greeting}, {userName}
         </h1>
-        <p className="text-foreground-secondary mt-1 capitalize">{today}</p>
+        <p className="text-foreground-secondary mt-1"><LiveDateTime /></p>
       </div>
 
       {/* Check-in/out + Weekly Progress */}

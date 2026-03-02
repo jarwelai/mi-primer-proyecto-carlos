@@ -5,7 +5,7 @@ import { getWeeklyReport } from '@/actions/reports'
 import { EmployeeStatusTable } from '@/features/team-dashboard/components/EmployeeStatusTable'
 import { ExportButtons } from '@/features/reports/components/ExportButtons'
 import { ComplianceCheckButton } from '@/features/hr-dashboard/components/ComplianceCheckButton'
-import { Card, CardTitle } from '@/components/ui'
+import { Card, CardTitle, LiveDateTime } from '@/components/ui'
 
 export const metadata = {
   title: 'RRHH | TimeTrack',
@@ -57,6 +57,7 @@ export default async function HRPage() {
       <div className="flex items-start justify-between">
         <div>
           <h1 className="text-2xl font-bold text-foreground">Panel RRHH</h1>
+          <p className="text-foreground-secondary mt-1"><LiveDateTime /></p>
           <p className="text-foreground-secondary mt-1">
             Control de asistencia de todos los empleados
           </p>
