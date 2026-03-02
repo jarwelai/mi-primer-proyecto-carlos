@@ -1,0 +1,5 @@
+[     400ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4000/grid.svg:0
+[     472ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4000/favicon.ico:0
+[   15682ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ http://localhost:4000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   17291ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://ovbxwzdybbamzfmyladm.supabase.co/rest/v1/profiles?select=role%2Cfull_name&id=eq.145c46d5-1880-433d-9b2c-ca8275cd3902:0
+[   17520ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://ovbxwzdybbamzfmyladm.supabase.co/rest/v1/profiles?select=role%2Cfull_name&id=eq.145c46d5-1880-433d-9b2c-ca8275cd3902:0

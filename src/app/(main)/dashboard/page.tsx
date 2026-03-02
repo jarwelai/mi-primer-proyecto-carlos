@@ -1,14 +1,13 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import { DashboardStats } from '@/features/dashboard/components/DashboardStats'
-import { UpcomingAppointments } from '@/features/dashboard/components/UpcomingAppointments'
-import { QuickActions } from '@/features/dashboard/components/QuickActions'
-import { AdminDashboard } from '@/features/dashboard/components/AdminDashboard'
-import { dashboardService } from '@/features/dashboard/services/dashboardService'
-import { OnboardingProvider } from '@/features/onboarding/components'
+import { getTodayEntries, getWeeklyHours, hasOpenCheckIn } from '@/actions/time-entries'
+import { CheckInButton } from '@/features/check-in/components/CheckInButton'
+import { TodayTimeline } from '@/features/check-in/components/TodayTimeline'
+import { WeeklyProgress } from '@/features/check-in/components/WeeklyProgress'
+import { Card, CardTitle } from '@/components/ui'
 
 export const metadata = {
-  title: 'Dashboard | LexAgenda'
+  title: 'Dashboard | TimeTrack',
 }
 
 export default async function DashboardPage() {
@@ -19,93 +18,67 @@ export default async function DashboardPage() {
     redirect('/login')
   }
 
-  // Obtener rol del usuario
   const { data: profile } = await supabase
     .from('profiles')
-    .select('role, full_name')
+    .select('full_name, role')
     .eq('id', user.id)
     .single()
 
-  const userRole = (profile?.role as 'client' | 'lawyer' | 'admin') || 'client'
   const userName = profile?.full_name || user.email?.split('@')[0] || 'Usuario'
-
   const greeting = getGreeting()
 
-  // Admin gets special dashboard
-  if (userRole === 'admin') {
-    const [adminStats, upcomingAppointments] = await Promise.all([
-      dashboardService.getAdminStats(),
-      dashboardService.getAllUpcomingAppointments(8)
-    ])
-
-    return (
-      <>
-        <OnboardingProvider userRole={userRole} userId={user.id} />
-        <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-8">
-          <div>
-            <h1 className="text-2xl font-bold text-foreground">
-              {greeting}, {userName}
-            </h1>
-            <p className="text-foreground-secondary mt-1">
-              Panel de administracion del bufete juridico
-            </p>
-          </div>
-          <AdminDashboard stats={adminStats} upcomingAppointments={upcomingAppointments} />
-        </div>
-      </>
-    )
-  }
-
-  // Regular user (client/lawyer) dashboard
-  const [stats, upcomingAppointments] = await Promise.all([
-    dashboardService.getStats(user.id, userRole as 'client' | 'lawyer'),
-    dashboardService.getUpcomingAppointments(user.id, userRole as 'client' | 'lawyer', 5)
+  const [{ entries }, { hours }, { isOpen, entry }] = await Promise.all([
+    getTodayEntries(),
+    getWeeklyHours(),
+    hasOpenCheckIn(),
   ])
 
+  const today = new Date().toLocaleDateString('es', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+
   return (
-    <>
-      {/* Onboarding Wizard */}
-      <OnboardingProvider userRole={userRole} userId={user.id} />
-
-      <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">
-            {greeting}, {userName}
-          </h1>
-          <p className="text-foreground-secondary mt-1">
-            {userRole === 'lawyer'
-              ? 'Aquí está el resumen de tu práctica legal'
-              : 'Aquí está el resumen de tus consultas legales'}
-          </p>
-        </div>
-
-        {/* Stats */}
-        <DashboardStats stats={stats} userRole={userRole} />
-
-        {/* Main content grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Upcoming appointments - takes 2 columns */}
-          <div className="lg:col-span-2">
-            <UpcomingAppointments
-              appointments={upcomingAppointments}
-              userRole={userRole}
-            />
-          </div>
-
-          {/* Quick actions - takes 1 column */}
-          <div>
-            <QuickActions userRole={userRole} />
-          </div>
-        </div>
+    <div className="p-6 md:p-8 max-w-5xl mx-auto space-y-8">
+      {/* Header */}
+      <div>
+        <h1 className="text-2xl font-bold text-foreground">
+          {greeting}, {userName}
+        </h1>
+        <p className="text-foreground-secondary mt-1 capitalize">{today}</p>
       </div>
-    </>
+
+      {/* Check-in/out + Weekly Progress */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Check-in Button */}
+        <Card variant="elevated" className="flex flex-col items-center justify-center py-10">
+          <CheckInButton
+            isCheckedIn={isOpen}
+            checkInTime={entry?.check_in}
+          />
+        </Card>
+
+        {/* Weekly Hours */}
+        <Card variant="elevated">
+          <CardTitle className="mb-4">Horas de la semana</CardTitle>
+          <WeeklyProgress hours={hours} />
+        </Card>
+      </div>
+
+      {/* Today Timeline */}
+      <Card variant="elevated">
+        <CardTitle className="mb-4">Registros de hoy</CardTitle>
+        <TodayTimeline entries={entries} />
+      </Card>
+    </div>
   )
 }
 
 function getGreeting(): string {
   const hour = new Date().getHours()
-  if (hour < 12) return 'Buenos días'
+  if (hour < 12) return 'Buenos dias'
   if (hour < 18) return 'Buenas tardes'
   return 'Buenas noches'
 }

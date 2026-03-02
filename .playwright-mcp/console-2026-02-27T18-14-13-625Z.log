@@ -1,1 +1,929 @@
 [    1243ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[  659492ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660319ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660419ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660420ms] [ERROR] ./src/app/page.tsx:4:1
+Module not found: Can't resolve '@/components/public/AboutSection'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+> 4 | import { AboutSection } from '@/components/public/AboutSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+
+Import map: aliased to relative './src/components/public/AboutSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660420ms] [ERROR] ./src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/public/CTABanner'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+>  8 | import { CTABanner } from '@/components/public/CTABanner'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+  11 | export default function HomePage() {
+
+Import map: aliased to relative './src/components/public/CTABanner' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660421ms] [ERROR] ./src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/public/ContactSection'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+>  9 | import { ContactSection } from '@/components/public/ContactSection'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | export default function HomePage() {
+  12 |   return (
+
+Import map: aliased to relative './src/components/public/ContactSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660421ms] [ERROR] ./src/app/page.tsx:2:1
+Module not found: Can't resolve '@/components/public/HeroSection'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+> 2 | import { HeroSection } from '@/components/public/HeroSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+
+Import map: aliased to relative './src/components/public/HeroSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660422ms] [ERROR] ./src/app/page.tsx:1:1
+Module not found: Can't resolve '@/components/public/PublicPageWrapper'
+> 1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+
+Import map: aliased to relative './src/components/public/PublicPageWrapper' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660422ms] [ERROR] ./src/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/public/ServicesGrid'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+> 5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+
+Import map: aliased to relative './src/components/public/ServicesGrid' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660425ms] [ERROR] ./src/app/page.tsx:6:1
+Module not found: Can't resolve '@/components/public/TabbedContent'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+> 6 | import { TabbedContent } from '@/components/public/TabbedContent'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+  9 | import { ContactSection } from '@/components/public/ContactSection'
+
+Import map: aliased to relative './src/components/public/TabbedContent' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660425ms] [ERROR] ./src/app/page.tsx:7:1
+Module not found: Can't resolve '@/components/public/TestimonialsCarousel'
+   5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+>  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+
+Import map: aliased to relative './src/components/public/TestimonialsCarousel' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660425ms] [ERROR] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/public/ValueCards'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+> 3 | import { ValueCards } from '@/components/public/ValueCards'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+
+Import map: aliased to relative './src/components/public/ValueCards' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660426ms] [ERROR] ./src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/config/siteConfig'
+  1 | import type { Metadata } from 'next'
+> 2 | import { siteConfig } from '@/config/siteConfig'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import './globals.css'
+  4 |
+  5 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/config/siteConfig' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660527ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660528ms] [ERROR] ./src/app/page.tsx:4:1
+Module not found: Can't resolve '@/components/public/AboutSection'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+> 4 | import { AboutSection } from '@/components/public/AboutSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+
+Import map: aliased to relative './src/components/public/AboutSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660529ms] [ERROR] ./src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/public/CTABanner'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+>  8 | import { CTABanner } from '@/components/public/CTABanner'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+  11 | export default function HomePage() {
+
+Import map: aliased to relative './src/components/public/CTABanner' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660529ms] [ERROR] ./src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/public/ContactSection'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+>  9 | import { ContactSection } from '@/components/public/ContactSection'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | export default function HomePage() {
+  12 |   return (
+
+Import map: aliased to relative './src/components/public/ContactSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660529ms] [ERROR] ./src/app/page.tsx:2:1
+Module not found: Can't resolve '@/components/public/HeroSection'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+> 2 | import { HeroSection } from '@/components/public/HeroSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+
+Import map: aliased to relative './src/components/public/HeroSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660530ms] [ERROR] ./src/app/page.tsx:1:1
+Module not found: Can't resolve '@/components/public/PublicPageWrapper'
+> 1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+
+Import map: aliased to relative './src/components/public/PublicPageWrapper' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660530ms] [ERROR] ./src/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/public/ServicesGrid'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+> 5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+
+Import map: aliased to relative './src/components/public/ServicesGrid' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660530ms] [ERROR] ./src/app/page.tsx:6:1
+Module not found: Can't resolve '@/components/public/TabbedContent'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+> 6 | import { TabbedContent } from '@/components/public/TabbedContent'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+  9 | import { ContactSection } from '@/components/public/ContactSection'
+
+Import map: aliased to relative './src/components/public/TabbedContent' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660531ms] [ERROR] ./src/app/page.tsx:7:1
+Module not found: Can't resolve '@/components/public/TestimonialsCarousel'
+   5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+>  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+
+Import map: aliased to relative './src/components/public/TestimonialsCarousel' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660531ms] [ERROR] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/public/ValueCards'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+> 3 | import { ValueCards } from '@/components/public/ValueCards'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+
+Import map: aliased to relative './src/components/public/ValueCards' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  660531ms] [ERROR] ./src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/config/siteConfig'
+  1 | import type { Metadata } from 'next'
+> 2 | import { siteConfig } from '@/config/siteConfig'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import './globals.css'
+  4 |
+  5 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/config/siteConfig' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661047ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=1ch6o:0
+[  661053ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661054ms] [ERROR] ./src/app/page.tsx:4:1
+Module not found: Can't resolve '@/components/public/AboutSection'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+> 4 | import { AboutSection } from '@/components/public/AboutSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+
+Import map: aliased to relative './src/components/public/AboutSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661054ms] [ERROR] ./src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/public/CTABanner'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+>  8 | import { CTABanner } from '@/components/public/CTABanner'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+  11 | export default function HomePage() {
+
+Import map: aliased to relative './src/components/public/CTABanner' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661054ms] [ERROR] ./src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/public/ContactSection'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+>  9 | import { ContactSection } from '@/components/public/ContactSection'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | export default function HomePage() {
+  12 |   return (
+
+Import map: aliased to relative './src/components/public/ContactSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661054ms] [ERROR] ./src/app/page.tsx:2:1
+Module not found: Can't resolve '@/components/public/HeroSection'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+> 2 | import { HeroSection } from '@/components/public/HeroSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+
+Import map: aliased to relative './src/components/public/HeroSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661055ms] [ERROR] ./src/app/page.tsx:1:1
+Module not found: Can't resolve '@/components/public/PublicPageWrapper'
+> 1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+
+Import map: aliased to relative './src/components/public/PublicPageWrapper' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661055ms] [ERROR] ./src/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/public/ServicesGrid'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+> 5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+
+Import map: aliased to relative './src/components/public/ServicesGrid' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661055ms] [ERROR] ./src/app/page.tsx:6:1
+Module not found: Can't resolve '@/components/public/TabbedContent'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+> 6 | import { TabbedContent } from '@/components/public/TabbedContent'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+  9 | import { ContactSection } from '@/components/public/ContactSection'
+
+Import map: aliased to relative './src/components/public/TabbedContent' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661056ms] [ERROR] ./src/app/page.tsx:7:1
+Module not found: Can't resolve '@/components/public/TestimonialsCarousel'
+   5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+>  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+
+Import map: aliased to relative './src/components/public/TestimonialsCarousel' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661056ms] [ERROR] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/public/ValueCards'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+> 3 | import { ValueCards } from '@/components/public/ValueCards'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+
+Import map: aliased to relative './src/components/public/ValueCards' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661056ms] [ERROR] ./src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/config/siteConfig'
+  1 | import type { Metadata } from 'next'
+> 2 | import { siteConfig } from '@/config/siteConfig'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import './globals.css'
+  4 |
+  5 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/config/siteConfig' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  661082ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=1ch6o:0
+[  661128ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  661408ms] Error: ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at Object.getCompilationErrors (file://C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1008:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\next\dist\server\dev\next-dev-server.js:706:42)
+    at DevServer.findPageComponents (file://C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\next\dist\server\dev\next-dev-server.js:676:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\next\dist\server\base-server.js:1733:26)
+[  661422ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661423ms] [ERROR] ./src/app/page.tsx:4:1
+Module not found: Can't resolve '@/components/public/AboutSection'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+> 4 | import { AboutSection } from '@/components/public/AboutSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+
+Import map: aliased to relative './src/components/public/AboutSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661424ms] [ERROR] ./src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/public/CTABanner'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+>  8 | import { CTABanner } from '@/components/public/CTABanner'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+  11 | export default function HomePage() {
+
+Import map: aliased to relative './src/components/public/CTABanner' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661424ms] [ERROR] ./src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/public/ContactSection'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+>  9 | import { ContactSection } from '@/components/public/ContactSection'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | export default function HomePage() {
+  12 |   return (
+
+Import map: aliased to relative './src/components/public/ContactSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661424ms] [ERROR] ./src/app/page.tsx:2:1
+Module not found: Can't resolve '@/components/public/HeroSection'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+> 2 | import { HeroSection } from '@/components/public/HeroSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+
+Import map: aliased to relative './src/components/public/HeroSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661424ms] [ERROR] ./src/app/page.tsx:1:1
+Module not found: Can't resolve '@/components/public/PublicPageWrapper'
+> 1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+
+Import map: aliased to relative './src/components/public/PublicPageWrapper' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661424ms] [ERROR] ./src/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/public/ServicesGrid'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+> 5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+
+Import map: aliased to relative './src/components/public/ServicesGrid' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661424ms] [ERROR] ./src/app/page.tsx:6:1
+Module not found: Can't resolve '@/components/public/TabbedContent'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+> 6 | import { TabbedContent } from '@/components/public/TabbedContent'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+  9 | import { ContactSection } from '@/components/public/ContactSection'
+
+Import map: aliased to relative './src/components/public/TabbedContent' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661425ms] [ERROR] ./src/app/page.tsx:7:1
+Module not found: Can't resolve '@/components/public/TestimonialsCarousel'
+   5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+>  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+
+Import map: aliased to relative './src/components/public/TestimonialsCarousel' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661425ms] [ERROR] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/public/ValueCards'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+> 3 | import { ValueCards } from '@/components/public/ValueCards'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+
+Import map: aliased to relative './src/components/public/ValueCards' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661425ms] [ERROR] ./src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/config/siteConfig'
+  1 | import type { Metadata } from 'next'
+> 2 | import { siteConfig } from '@/config/siteConfig'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import './globals.css'
+  4 |
+  5 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/config/siteConfig' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661479ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661479ms] [ERROR] ./src/app/page.tsx:4:1
+Module not found: Can't resolve '@/components/public/AboutSection'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+> 4 | import { AboutSection } from '@/components/public/AboutSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+
+Import map: aliased to relative './src/components/public/AboutSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661479ms] [ERROR] ./src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/public/CTABanner'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+>  8 | import { CTABanner } from '@/components/public/CTABanner'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+  11 | export default function HomePage() {
+
+Import map: aliased to relative './src/components/public/CTABanner' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661480ms] [ERROR] ./src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/public/ContactSection'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+>  9 | import { ContactSection } from '@/components/public/ContactSection'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | export default function HomePage() {
+  12 |   return (
+
+Import map: aliased to relative './src/components/public/ContactSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661480ms] [ERROR] ./src/app/page.tsx:2:1
+Module not found: Can't resolve '@/components/public/HeroSection'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+> 2 | import { HeroSection } from '@/components/public/HeroSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+
+Import map: aliased to relative './src/components/public/HeroSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661480ms] [ERROR] ./src/app/page.tsx:1:1
+Module not found: Can't resolve '@/components/public/PublicPageWrapper'
+> 1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+
+Import map: aliased to relative './src/components/public/PublicPageWrapper' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661481ms] [ERROR] ./src/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/public/ServicesGrid'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+> 5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+
+Import map: aliased to relative './src/components/public/ServicesGrid' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661481ms] [ERROR] ./src/app/page.tsx:6:1
+Module not found: Can't resolve '@/components/public/TabbedContent'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+> 6 | import { TabbedContent } from '@/components/public/TabbedContent'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+  9 | import { ContactSection } from '@/components/public/ContactSection'
+
+Import map: aliased to relative './src/components/public/TabbedContent' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661481ms] [ERROR] ./src/app/page.tsx:7:1
+Module not found: Can't resolve '@/components/public/TestimonialsCarousel'
+   5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+>  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+
+Import map: aliased to relative './src/components/public/TestimonialsCarousel' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661481ms] [ERROR] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/public/ValueCards'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+> 3 | import { ValueCards } from '@/components/public/ValueCards'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+
+Import map: aliased to relative './src/components/public/ValueCards' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  661482ms] [ERROR] ./src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/config/siteConfig'
+  1 | import type { Metadata } from 'next'
+> 2 | import { siteConfig } from '@/config/siteConfig'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import './globals.css'
+  4 |
+  5 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/config/siteConfig' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690992ms] [ERROR] ./src/app/globals.css
+Error evaluating Node.js code
+Error: ENOENT: no such file or directory, stat 'C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\src\app\(main)\appointments\page.tsx'
+    [at Object.statSync (node:fs:1725:25)]
+    [at resolveChangedFiles (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:236:36)]
+    [at resolvedChangedContent (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\content.js:147:42)]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\lib\setupTrackingContext.js:136:99]
+    [at C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\processTailwindFeatures.js:46:11]
+    [at plugins (C:\Users\cgdm\OneDrive\Documents\antigravity\mi-proyecto\node_modules\tailwindcss\lib\plugin.js:38:69)]
+    [at LazyResult.runOnRoot (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:361:16)]
+    [at LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:290:26)]
+    [at LazyResult.async (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:192:30)]
+    [at LazyResult.then (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:436:17)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690992ms] [ERROR] ./src/app/page.tsx:4:1
+Module not found: Can't resolve '@/components/public/AboutSection'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+> 4 | import { AboutSection } from '@/components/public/AboutSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+
+Import map: aliased to relative './src/components/public/AboutSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690992ms] [ERROR] ./src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/public/CTABanner'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+>  8 | import { CTABanner } from '@/components/public/CTABanner'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+  11 | export default function HomePage() {
+
+Import map: aliased to relative './src/components/public/CTABanner' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690992ms] [ERROR] ./src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/public/ContactSection'
+   7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+>  9 | import { ContactSection } from '@/components/public/ContactSection'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | export default function HomePage() {
+  12 |   return (
+
+Import map: aliased to relative './src/components/public/ContactSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690993ms] [ERROR] ./src/app/page.tsx:2:1
+Module not found: Can't resolve '@/components/public/HeroSection'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+> 2 | import { HeroSection } from '@/components/public/HeroSection'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+
+Import map: aliased to relative './src/components/public/HeroSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690993ms] [ERROR] ./src/app/page.tsx:1:1
+Module not found: Can't resolve '@/components/public/PublicPageWrapper'
+> 1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+
+Import map: aliased to relative './src/components/public/PublicPageWrapper' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690993ms] [ERROR] ./src/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/public/ServicesGrid'
+  3 | import { ValueCards } from '@/components/public/ValueCards'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+> 5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+
+Import map: aliased to relative './src/components/public/ServicesGrid' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690993ms] [ERROR] ./src/app/page.tsx:6:1
+Module not found: Can't resolve '@/components/public/TabbedContent'
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+> 6 | import { TabbedContent } from '@/components/public/TabbedContent'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+  8 | import { CTABanner } from '@/components/public/CTABanner'
+  9 | import { ContactSection } from '@/components/public/ContactSection'
+
+Import map: aliased to relative './src/components/public/TabbedContent' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690994ms] [ERROR] ./src/app/page.tsx:7:1
+Module not found: Can't resolve '@/components/public/TestimonialsCarousel'
+   5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+   6 | import { TabbedContent } from '@/components/public/TabbedContent'
+>  7 | import { TestimonialsCarousel } from '@/components/public/TestimonialsCarousel'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { CTABanner } from '@/components/public/CTABanner'
+   9 | import { ContactSection } from '@/components/public/ContactSection'
+  10 |
+
+Import map: aliased to relative './src/components/public/TestimonialsCarousel' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690994ms] [ERROR] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/public/ValueCards'
+  1 | import { PublicPageWrapper } from '@/components/public/PublicPageWrapper'
+  2 | import { HeroSection } from '@/components/public/HeroSection'
+> 3 | import { ValueCards } from '@/components/public/ValueCards'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { AboutSection } from '@/components/public/AboutSection'
+  5 | import { ServicesGrid } from '@/components/public/ServicesGrid'
+  6 | import { TabbedContent } from '@/components/public/TabbedContent'
+
+Import map: aliased to relative './src/components/public/ValueCards' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
+[  690994ms] [ERROR] ./src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/config/siteConfig'
+  1 | import type { Metadata } from 'next'
+> 2 | import { siteConfig } from '@/config/siteConfig'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import './globals.css'
+  4 |
+  5 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/config/siteConfig' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b3fb3b5f._.js:1920
