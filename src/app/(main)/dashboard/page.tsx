@@ -4,7 +4,7 @@ import { getTodayEntries, getWeeklyHours, hasOpenCheckIn } from '@/actions/time-
 import { CheckInButton } from '@/features/check-in/components/CheckInButton'
 import { TodayTimeline } from '@/features/check-in/components/TodayTimeline'
 import { WeeklyProgress } from '@/features/check-in/components/WeeklyProgress'
-import { Card, CardTitle, LiveDateTime } from '@/components/ui'
+import { Card, CardTitle, LiveDateTime, Greeting } from '@/components/ui'
 import { getEmployeeTeamInfo } from '@/actions/admin'
 
 export const metadata = {
@@ -26,7 +26,6 @@ export default async function DashboardPage() {
     .single()
 
   const userName = profile?.full_name || user.email?.split('@')[0] || 'Usuario'
-  const greeting = getGreeting()
 
   const [{ entries }, { hours }, { isOpen, entry }, { teamInfo }] = await Promise.all([
     getTodayEntries(),
@@ -40,7 +39,7 @@ export default async function DashboardPage() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-foreground">
-          {greeting}, {userName}
+          <Greeting name={userName} />
         </h1>
         <p className="text-foreground-secondary mt-1"><LiveDateTime /></p>
         {teamInfo.length > 0 && (
@@ -48,6 +47,9 @@ export default async function DashboardPage() {
             {teamInfo.map((t, i) => (
               <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
                 {t.department} — {t.team}
+                {t.role === 'supervisor' && (
+                  <span className="text-[10px] bg-primary-200 px-1.5 py-0.5 rounded">Supervisor</span>
+                )}
               </span>
             ))}
           </div>
@@ -78,11 +80,4 @@ export default async function DashboardPage() {
       </Card>
     </div>
   )
-}
-
-function getGreeting(): string {
-  const hour = new Date().getHours()
-  if (hour < 12) return 'Buenos dias'
-  if (hour < 18) return 'Buenas tardes'
-  return 'Buenas noches'
 }

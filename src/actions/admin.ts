@@ -257,20 +257,46 @@ export async function removeTeamMember(memberId: string) {
 
 export async function getEmployeeTeamInfo(employeeId: string) {
   const supabase = await createClient()
-  const { data, error } = await supabase
+
+  // Teams as member
+  const { data: memberData } = await supabase
     .from('team_members')
-    .select(`
-      teams (name, departments (name))
-    `)
+    .select('teams (name, departments (name))')
     .eq('employee_id', employeeId)
 
-  if (error) return { teamInfo: [] }
+  // Teams as supervisor
+  const { data: supervisorData } = await supabase
+    .from('teams')
+    .select('name, departments (name)')
+    .eq('supervisor_id', employeeId)
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const teamInfo = (data || []).map((m: any) => ({
+  const fromMembers = (memberData || []).map((m: any) => ({
     team: m.teams?.name || '',
     department: m.teams?.departments?.name || '',
+    role: 'miembro' as const,
   }))
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const fromSupervisor = (supervisorData || []).map((t: any) => ({
+    team: t.name || '',
+    department: t.departments?.name || '',
+    role: 'supervisor' as const,
+  }))
+
+  // Merge without duplicates (prefer supervisor role if in both)
+  const seen = new Set<string>()
+  const teamInfo: { team: string; department: string; role: 'miembro' | 'supervisor' }[] = []
+
+  for (const t of fromSupervisor) {
+    seen.add(t.team)
+    teamInfo.push(t)
+  }
+  for (const t of fromMembers) {
+    if (!seen.has(t.team)) {
+      teamInfo.push(t)
+    }
+  }
 
   return { teamInfo }
 }

@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { getTeamMembers, getEmployeesTodayStatus, getEmployeesWeeklyHours } from '@/actions/team'
 import { EmployeeStatusTable } from '@/features/team-dashboard/components/EmployeeStatusTable'
-import { Card, CardTitle, LiveDateTime } from '@/components/ui'
+import { Card, CardTitle, LiveDateTime, Greeting } from '@/components/ui'
 
 export const metadata = {
   title: 'Mi Equipo | TimeTrack',
@@ -16,7 +16,7 @@ export default async function TeamPage() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('role')
+    .select('role, full_name')
     .eq('id', user.id)
     .single()
 
@@ -53,12 +53,21 @@ export default async function TeamPage() {
   return (
     <div className="p-6 md:p-8 max-w-6xl mx-auto space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Mi Equipo</h1>
+        <h1 className="text-2xl font-bold text-foreground">
+          <Greeting name={profile?.full_name || user.email?.split('@')[0] || 'Supervisor'} />
+        </h1>
         <p className="text-foreground-secondary mt-1"><LiveDateTime /></p>
-        <p className="text-foreground-secondary mt-1">
-          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-          {teams?.map((t: any) => t.name).join(', ')}
-        </p>
+        {teams && teams.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-2">
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+            {teams.map((t: any) => (
+              <span key={t.id} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
+                {t.departments?.name || 'Sin depto'} — {t.name}
+                <span className="text-[10px] bg-primary-200 px-1.5 py-0.5 rounded">Supervisor</span>
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Summary */}

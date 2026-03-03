@@ -11,7 +11,7 @@ export async function getTeamMembers() {
   // Buscar equipos donde el usuario es supervisor
   const { data: teams } = await supabase
     .from('teams')
-    .select('id, name')
+    .select('id, name, departments (name)')
     .eq('supervisor_id', user.id)
 
   if (!teams || teams.length === 0) return { members: [] }
