@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useTransition } from 'react'
-import { updateUserRole, deleteUser } from '@/actions/admin'
+import { updateUserRole, updateUserName, deleteUser } from '@/actions/admin'
 import type { UserRole } from '@/types/database'
 
 interface User {
@@ -27,7 +27,34 @@ export function UserRoleManager({ users, currentUserId }: UserRoleManagerProps) 
   const [isPending, startTransition] = useTransition()
   const [changingId, setChangingId] = useState<string | null>(null)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [editingNameId, setEditingNameId] = useState<string | null>(null)
+  const [editingNameValue, setEditingNameValue] = useState('')
   const [error, setError] = useState<string | null>(null)
+
+  const startEditingName = (user: User) => {
+    setEditingNameId(user.id)
+    setEditingNameValue(user.full_name || '')
+  }
+
+  const saveNameEdit = (userId: string) => {
+    const trimmed = editingNameValue.trim()
+    if (!trimmed) {
+      setEditingNameId(null)
+      return
+    }
+    setError(null)
+    setChangingId(userId)
+    startTransition(async () => {
+      const result = await updateUserName(userId, trimmed)
+      if (result.error) setError(result.error)
+      setChangingId(null)
+      setEditingNameId(null)
+    })
+  }
+
+  const cancelEditingName = () => {
+    setEditingNameId(null)
+  }
 
   const handleRoleChange = (userId: string, newRole: string) => {
     setError(null)
@@ -70,7 +97,30 @@ export function UserRoleManager({ users, currentUserId }: UserRoleManagerProps) 
             {users.map((user) => (
               <tr key={user.id} className="hover:bg-gray-50 transition-colors">
                 <td className="py-3 font-medium text-foreground">
-                  {user.full_name || 'Sin nombre'}
+                  {editingNameId === user.id ? (
+                    <input
+                      autoFocus
+                      title="Editar nombre"
+                      placeholder="Nombre completo"
+                      value={editingNameValue}
+                      onChange={(e) => setEditingNameValue(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') saveNameEdit(user.id)
+                        if (e.key === 'Escape') cancelEditingName()
+                      }}
+                      onBlur={() => saveNameEdit(user.id)}
+                      disabled={isPending && changingId === user.id}
+                      className="text-sm border border-primary-400 rounded-lg px-3 py-1 w-full bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:opacity-50"
+                    />
+                  ) : (
+                    <button
+                      onClick={() => startEditingName(user)}
+                      className="hover:text-primary-600 hover:underline cursor-pointer text-left"
+                      title="Clic para editar nombre"
+                    >
+                      {user.full_name || 'Sin nombre'}
+                    </button>
+                  )}
                 </td>
                 <td className="py-3 text-foreground-secondary">{user.email}</td>
                 <td className="py-3">

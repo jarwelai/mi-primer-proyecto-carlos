@@ -32,6 +32,34 @@ export async function updateUserRole(userId: string, role: string) {
   return { success: true }
 }
 
+export async function updateUserName(userId: string, fullName: string) {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) return { error: 'No autenticado' }
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .single()
+
+  if (profile?.role !== 'admin') return { error: 'Sin permisos' }
+
+  const trimmed = fullName.trim()
+  if (!trimmed) return { error: 'El nombre no puede estar vacio' }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ full_name: trimmed })
+    .eq('id', userId)
+
+  if (error) return { error: error.message }
+
+  revalidatePath('/admin')
+  return { success: true }
+}
+
 export async function getDepartments() {
   const supabase = await createClient()
   const { data, error } = await supabase
