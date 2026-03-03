@@ -1,12 +1,13 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { getAllEmployees } from '@/actions/team'
-import { getDepartments, getTeams } from '@/actions/admin'
+import { getDepartments, getTeams, getTeamMembersGrouped } from '@/actions/admin'
 import { UserRoleManager } from '@/features/admin-users/components/UserRoleManager'
 import { CreateUserForm } from '@/features/admin-users/components/CreateUserForm'
 import { CreateDepartmentForm } from '@/features/admin-users/components/CreateDepartmentForm'
 import { CreateTeamForm } from '@/features/admin-users/components/CreateTeamForm'
 import { AddTeamMemberForm } from '@/features/admin-users/components/AddTeamMemberForm'
+import { TeamMembersList } from '@/features/admin-users/components/TeamMembersList'
 import { Card, CardTitle, LiveDateTime } from '@/components/ui'
 import type { UserRole } from '@/types/database'
 
@@ -28,10 +29,11 @@ export default async function AdminPage() {
 
   if (profile?.role !== 'admin') redirect('/dashboard')
 
-  const [{ employees }, { departments }, { teams }] = await Promise.all([
+  const [{ employees }, { departments }, { teams }, { members: teamMembers }] = await Promise.all([
     getAllEmployees(),
     getDepartments(),
     getTeams(),
+    getTeamMembersGrouped(),
   ])
 
   const usersWithRole = employees.map((e: { id: string; full_name: string | null; email: string; role: string }) => ({
@@ -143,6 +145,28 @@ export default async function AdminPage() {
       <Card variant="elevated">
         <CardTitle className="mb-4">Asignar empleados a equipos</CardTitle>
         <AddTeamMemberForm teams={teamList} employees={employeeList} />
+        {teamMembers.length > 0 && (
+          <div className="mt-4 pt-4 border-t border-border">
+            <p className="text-sm font-semibold text-foreground-secondary mb-3">Miembros actuales</p>
+            <TeamMembersList
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              members={teamMembers.map((m: any) => {
+                const team = Array.isArray(m.teams) ? m.teams[0] : m.teams
+                const profile = Array.isArray(m.profiles) ? m.profiles[0] : m.profiles
+                const dept = team?.departments
+                const deptName = Array.isArray(dept) ? dept[0]?.name : dept?.name
+                return {
+                  id: m.id,
+                  teamName: team?.name || '',
+                  departmentName: deptName || '',
+                  employeeName: profile?.full_name || profile?.email || 'Sin nombre',
+                  employeeEmail: profile?.email || '',
+                  role: profile?.role || 'employee',
+                }
+              })}
+            />
+          </div>
+        )}
       </Card>
     </div>
   )

@@ -214,6 +214,67 @@ export async function deleteUser(userId: string) {
   return { success: true }
 }
 
+export async function getTeamMembersGrouped() {
+  const supabase = await createClient()
+  const { data, error } = await supabase
+    .from('team_members')
+    .select(`
+      id,
+      team_id,
+      employee_id,
+      teams (name, departments (name)),
+      profiles (full_name, email, role)
+    `)
+    .order('team_id')
+
+  if (error) return { members: [], error: error.message }
+  return { members: data || [] }
+}
+
+export async function removeTeamMember(memberId: string) {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return { error: 'No autenticado' }
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .single()
+
+  if (profile?.role !== 'admin') return { error: 'Sin permisos' }
+
+  const { error } = await supabase
+    .from('team_members')
+    .delete()
+    .eq('id', memberId)
+
+  if (error) return { error: error.message }
+
+  revalidatePath('/admin')
+  return { success: true }
+}
+
+export async function getEmployeeTeamInfo(employeeId: string) {
+  const supabase = await createClient()
+  const { data, error } = await supabase
+    .from('team_members')
+    .select(`
+      teams (name, departments (name))
+    `)
+    .eq('employee_id', employeeId)
+
+  if (error) return { teamInfo: [] }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const teamInfo = (data || []).map((m: any) => ({
+    team: m.teams?.name || '',
+    department: m.teams?.departments?.name || '',
+  }))
+
+  return { teamInfo }
+}
+
 export async function getTeams() {
   const supabase = await createClient()
   const { data, error } = await supabase

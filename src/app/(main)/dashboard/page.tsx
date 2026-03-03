@@ -5,6 +5,7 @@ import { CheckInButton } from '@/features/check-in/components/CheckInButton'
 import { TodayTimeline } from '@/features/check-in/components/TodayTimeline'
 import { WeeklyProgress } from '@/features/check-in/components/WeeklyProgress'
 import { Card, CardTitle, LiveDateTime } from '@/components/ui'
+import { getEmployeeTeamInfo } from '@/actions/admin'
 
 export const metadata = {
   title: 'Dashboard | TimeTrack',
@@ -27,10 +28,11 @@ export default async function DashboardPage() {
   const userName = profile?.full_name || user.email?.split('@')[0] || 'Usuario'
   const greeting = getGreeting()
 
-  const [{ entries }, { hours }, { isOpen, entry }] = await Promise.all([
+  const [{ entries }, { hours }, { isOpen, entry }, { teamInfo }] = await Promise.all([
     getTodayEntries(),
     getWeeklyHours(),
     hasOpenCheckIn(),
+    getEmployeeTeamInfo(user.id),
   ])
 
   return (
@@ -41,6 +43,15 @@ export default async function DashboardPage() {
           {greeting}, {userName}
         </h1>
         <p className="text-foreground-secondary mt-1"><LiveDateTime /></p>
+        {teamInfo.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-2">
+            {teamInfo.map((t, i) => (
+              <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
+                {t.department} — {t.team}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Check-in/out + Weekly Progress */}
