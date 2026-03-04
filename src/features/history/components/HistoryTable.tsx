@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import type { TimeEntry } from '@/types/database'
 
 interface HistoryTableProps {
@@ -7,6 +8,12 @@ interface HistoryTableProps {
 }
 
 export function HistoryTable({ entries }: HistoryTableProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   if (entries.length === 0) {
     return (
       <div className="text-center py-12 text-foreground-secondary">
@@ -15,7 +22,9 @@ export function HistoryTable({ entries }: HistoryTableProps) {
     )
   }
 
-  // Agrupar por fecha
+  if (!mounted) return null
+
+  // Agrupar por fecha local
   const grouped = groupByDate(entries)
 
   return (

@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import type { TimeEntry } from '@/types/database'
 
 interface TodayTimelineProps {
@@ -7,6 +8,12 @@ interface TodayTimelineProps {
 }
 
 export function TodayTimeline({ entries }: TodayTimelineProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   if (entries.length === 0) {
     return (
       <div className="text-center py-8 text-foreground-secondary">
@@ -15,6 +22,8 @@ export function TodayTimeline({ entries }: TodayTimelineProps) {
       </div>
     )
   }
+
+  if (!mounted) return null
 
   return (
     <div className="flex gap-3 overflow-x-auto pb-2">
