@@ -3,6 +3,14 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui'
 
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('es')
+}
+
+function formatTime(iso: string): string {
+  return new Date(iso).toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' })
+}
+
 interface EmployeeReport {
   name: string
   email: string
@@ -71,9 +79,9 @@ export function ExportButtons({ employees, period }: ExportButtonsProps) {
       const detailData = employees.flatMap(emp =>
         emp.dailyEntries.map(entry => ({
           Nombre: emp.name,
-          Fecha: entry.date,
-          Entrada: entry.checkIn,
-          Salida: entry.checkOut,
+          Fecha: formatDate(entry.date),
+          Entrada: formatTime(entry.checkIn),
+          Salida: formatTime(entry.checkOut),
           Horas: Number(entry.hours.toFixed(2)),
         }))
       )

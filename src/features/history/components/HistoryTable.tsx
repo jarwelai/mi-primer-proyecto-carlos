@@ -1,3 +1,5 @@
+'use client'
+
 import type { TimeEntry } from '@/types/database'
 
 interface HistoryTableProps {

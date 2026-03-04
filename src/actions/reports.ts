@@ -56,9 +56,9 @@ export async function getWeeklyReport() {
         const hours = (new Date(e.check_out!).getTime() - new Date(e.check_in).getTime()) / (1000 * 60 * 60)
         weeklyHours += hours
         return {
-          date: new Date(e.check_in).toLocaleDateString('es'),
-          checkIn: new Date(e.check_in).toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' }),
-          checkOut: new Date(e.check_out!).toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' }),
+          date: e.check_in,
+          checkIn: e.check_in,
+          checkOut: e.check_out!,
           hours,
         }
       })
